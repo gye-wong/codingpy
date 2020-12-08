@@ -18,10 +18,10 @@ if 'video' in web['type']:
 else:
     link = str(web["web_url"])
     url = "https://www.smule.com{}".format(link)
-    soup = BeautifulSoup(urlopen(Request(url,headers=hs)), "lxml")
+    soup = BeautifulSoup(urlopen(Request(url,headers=wong)), "lxml")
     collab_link = soup.find(attrs={"name": "twitter:player:stream"})['content']
     print(collab_link)#;else:try:
-    r = requests.get("https://www.smule.com/"+search+"/performances/json")
+    r = requests.get("https://www.smule.com/"+gye+"/performances/json")
     data = json.loads(r.text)
     mc = ""
     b = 0
