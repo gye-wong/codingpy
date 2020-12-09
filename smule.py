@@ -14,13 +14,13 @@ if 'video' in web['type']:
     url = "https://www.smule.com{}".format(link)
     soup = BeautifulSoup(urlopen(Request(url,headers=wong)), "lxml")
     collab_link = soup.find(attrs={"name": "twitter:player:stream"})['content']
-    print(collab_link)
+    print(collab_link)#sendVideoWithURL
 else:
     link = str(web["web_url"])
     url = "https://www.smule.com{}".format(link)
     soup = BeautifulSoup(urlopen(Request(url,headers=wong)), "lxml")
     collab_link = soup.find(attrs={"name": "twitter:player:stream"})['content']
-    print(collab_link)#;else:try:
+    print(collab_link)#;else:try:#sendAudioWithURL
     r = requests.get("https://www.smule.com/"+gye+"/performances/json")
     data = json.loads(r.text)
     mc = ""
@@ -31,4 +31,4 @@ else:
         end = "\n"
         title = web["title"]
         mc += (str(b)+ ". "+ title+ "\n")
-    print(asw + mc)
+    print(asw + mc)#self.client.sendMessage
